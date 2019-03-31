@@ -1,0 +1,41 @@
+<section class="accordian-section section">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="heading">
+          <h4><b>SKILL</b></h4>
+        </div>
+      </div><!-- col-sm-12 -->
+
+      <div class="col-md-12 col-lg-6" >
+
+        <div *ngFor="let item of listProcess" class="line-progress margin-b-20"  style="position: relative;">
+          <div></div>
+          <p class="progress-title"><b>{{item.name}}</b></p>
+          <svg viewBox="0 0 100 1" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+            <path d="M 0,0.5 L 100,0.5" stroke="#eee" stroke-width="1" fill-opacity="0"></path>
+            <path d="M 0,0.5 L 100,0.5" stroke="#FEAE01" stroke-width="1" fill-opacity="0"
+              style="stroke-dasharray: 100, 100;" [style.stroke-dashoffset]="100-item.percent"></path>
+          </svg>
+          <div class="progressbar-text" style="color: rgb(254, 174, 1);">{{item.percent}}%</div>
+        </div>
+
+      </div><!-- col-sm-6 -->
+
+      <div class="col-md-12 col-lg-6">
+        <div class="panel margin-b-30">
+          <div class="panel-area margin-b-30">
+            <h5 class="panel-title active"><b>{{project.name}}</b>
+              <i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
+            <p class="panel-desc">{{project.project1}}</p>
+           
+          </div><!-- panel-area -->
+
+
+        </div><!-- panel -->
+      </div><!-- col-sm-6-->
+
+    </div><!-- row -->
+  </div><!-- container -->
+</section>

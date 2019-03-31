@@ -1,0 +1,23 @@
+<section class="iconboxes-section section" id="counter">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="heading">
+          <h4><b>RESEARCH</b></h4>
+        </div>
+      </div><!-- col-sm-12 -->
+      
+      <div *ngFor="let item of listiconbox" class="col-sm-6 col-md-6 col-lg-4">
+        <div class="iconbox margin-b-30">
+          <i class="line-icon icon-rocket"></i>
+          <h5 class="margin-tb-20"><b>{{item.name}}</b></h5>
+          <p>{{item.content}}</p>
+        </div><!-- counter -->
+      </div><!-- col-md-4 -->
+      
+     
+     
+      
+    </div><!-- row -->
+  </div><!-- container -->
+</section>
